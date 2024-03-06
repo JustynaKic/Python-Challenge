@@ -1,0 +1,11 @@
+Zadanie nr 1
+
+string = "Justyna Kicun"
+reversed_string = string[::-1]
+print(reversed_string)
+
+Zadanie nr 2
+
+text = "Hello all! My name is Justyna Kicun. How are you?"
+word_count = len(text.split())
+print(f"The number of words in the string: {word_count}")
