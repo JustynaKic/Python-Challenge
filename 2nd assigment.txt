@@ -1,11 +1,24 @@
-Zadanie nr 1
+Zadanie nr 1 - Write a program that as input accepts a string typed on keyboard and as output it will print this string reversed
 
 string = "Justyna Kicun"
 reversed_string = string[::-1]
 print(reversed_string)
 
-Zadanie nr 2
+Zadanie nr 2 - Write a word counter: as input program accepts a txt file, then reads the content from the file and as output prints the number of words in that txt file. You need to create this txt file first and fill it with some sentences.
 
 text = "Hello all! My name is Justyna Kicun. How are you?"
 word_count = len(text.split())
 print(f"The number of words in the string: {word_count}")
+
+Zadanie nr 4 - Write a function that counts the number of vowels in a given word.
+word = input ('Please provide a sample text')
+vowels = 'aeiouAEIOU'
+count = sum (word.count(vowel) for vowel in vowels)
+print (count)
+
+Zadanie nr 5 - Rewrite the function from task 4 and now it should return a dictionary with the vowel as key and the number of the vowel in a word as value.
+word = input ('Please provide a sample text')
+vowels = 'aeiouAEIOU'
+for vowel in vowels:
+    count = word.count(vowel)
+    print("{"+ vowel +" : " + str (count) + " }")
