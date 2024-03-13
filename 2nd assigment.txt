@@ -22,3 +22,15 @@ vowels = 'aeiouAEIOU'
 for vowel in vowels:
     count = word.count(vowel)
     print("{"+ vowel +" : " + str (count) + " }")
+
+Zadanie nr 6 - Modify the function created in task 5, but now as input use a csv file with words in it (ie. inputs.csv)
+Expected result: the function should create a txt file with dictionary which contains the input word as key, dictionary with vowels, and the number of the vowels as value. It should look like this: {'banana' : {'a': 3}}
+
+import csv
+filename = 'fruits.csv'
+ with open (filename, newline='') as csvfile:
+    reader = csv.reader(csvfile)
+     for row in reader:
+            word = row[0]
+            vowels = 'aeiouAEIOU'
+            vowel_count = sum(word.count(vowel) for vowel in vowels)
