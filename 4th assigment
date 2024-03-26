@@ -1,0 +1,60 @@
+Zadanie 1) Write program that finds max 3 salaries from the list.
+salaries = [10000, 12000, 7000, 8500, 11200, 9300, 15100, 18000, 16400, 11000]
+sorted_salaries = sorted (salaries, reverse = True)
+top_three_salaries = sorted_salaries[:3]
+print(top_three_salaries)
+
+Zadanie 2) Write program that finds salaries greater than mean salary from dictionary.
+def find_top_3_salaries(salaries):
+    sorted_salaries = sorted(salaries, reverse=True)
+    top_3 = sorted_salaries[:3]
+    return top_3
+salaries = [10000, 12000, 7000, 8500, 11200, 9300, 15100, 18000, 16400, 11000]
+top_3_salaries = find_top_3_salaries(salaries)
+print("Top 3 salaries:", top_3_salaries)
+
+Zadanie 3) Write program that filters employees from ‘Management’ department and counts them.
+def count_management_employees(employee_data):
+    management_employees = [employee for employee, (department, _) in employee_data.items() if department == 'Management']
+    num_management_employees = len(management_employees)
+    return num_management_employees
+
+employee_data = {
+    "Jacek": ("Management", 50000),
+    "Alicja": ("Finance", 60000),
+    "Bartek": ("Management", 45000),
+    "Ewa": ("Human Resources", 75000),
+    "Szymon": ("Management", 80000),
+    "Emilia": ("Finance", 55000),
+    "Michal": ("Management", 70000)
+}
+
+num_management_employees = count_management_employees(employee_data)
+print("Number of employees in the Management department:", num_management_employees)
+
+Zadanie 4) Write program that maps employee id to first letter of name, technically means returns a dictionary, where:
+
+-  key - an employee's id,
+
+-  value - first letter of name
+
+def map_id_to_first_letter(names_dict):
+    id_to_first_letter = {}
+    for employee_id, name in names_dict.items():
+        first_letter = name[0]
+        id_to_first_letter[employee_id] = first_letter
+    return id_to_first_letter
+
+employee_names = {
+    1: "Jan",
+    2: "Alicja",
+    3: "Bartek",
+    4: "Ewa",
+    5: "Szymon",
+    6: "Emilia",
+    7: "Michal"
+}
+
+id_to_first_letter = map_id_to_first_letter(employee_names)
+print("Employee ID to first letter of name mapping:")
+print(id_to_first_letter)
